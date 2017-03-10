@@ -63,6 +63,16 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'aliyun' => [
+             'driver' => 'aliyun',
+             'access_id' => '',
+             'access_key' => '',
+             'bucket' =>'',
+             'endpoint'=>'',
+             'isCName' =>'',
+             'debug' =>''
+        ]
+
     ],
 
 ];
