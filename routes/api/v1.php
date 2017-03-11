@@ -35,9 +35,7 @@ PUT/PATCH	/photos/{photo}	update	photos.update
 // 非登录页面不需要 auth:api
 Route::group(['middeware'=>'auth:api'],function(){
 
-     Route::post('auth/register','AuthController@register');
-     Route::post('auht/login','AuthController@login');
-
+     Route::resource('auth','AuthController',['only'=>['index','show','store']]);
      Route::group(['middeware'=>'auth:api'],function(){
          Route::resource('img','ImageController',['only'=>['index','show']]);
      });

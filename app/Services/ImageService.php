@@ -28,4 +28,9 @@ class ImageService extends  ServicesAbstract
 
 
     }
+
+    static public function  generateImg(){
+
+
+    }
 }

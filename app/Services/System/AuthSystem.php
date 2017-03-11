@@ -24,9 +24,4 @@ class AuthSystem
         ]);
         return $res;
     }
-
-    static function login($identifier,$pwd){
-
-
-    }
 }

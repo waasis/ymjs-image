@@ -17,21 +17,24 @@ class AuthService
 {
 
 
-     static  public function  register($data){
-
-
+     static  public function  register($data,$type='common'){
 
          $result = AuthSystem::create($data);
 
-        // 返回用户信息
-        return  $result;
+         if($type){
+
+
+         }
+         // 返回用户信息
+         return  $result;
      }
 
-    static public function  registerWithPhone($phone,$pwd){
+    static public  function  registerWithPhone($phone,$pwd){
          // 返回用户信息
-        return  [];
+         return  [];
     }
 
+    // web 专用
     static  public function  login($identifier,$password){
 
 

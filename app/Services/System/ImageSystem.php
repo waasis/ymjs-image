@@ -8,12 +8,15 @@
 
 namespace App\Services\System;
 
-
 class ImageSystem
 {
 
-
      static public function getImage($image_id){
+
+
+     }
+
+     static public function  store($file){
 
 
      }
