@@ -179,7 +179,7 @@ return [
 
         // register  passport
         Laravel\Passport\PassportServiceProvider::class,
-
+        
     ],
 
     /*

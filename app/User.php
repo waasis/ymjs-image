@@ -28,4 +28,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public  function  findForPassPort($identifier){
+
+        return User::orWhere('email', $identifier)->orWhere('name', $identifier)->first();
+    }
 }

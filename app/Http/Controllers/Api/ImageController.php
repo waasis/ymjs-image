@@ -53,9 +53,12 @@ class ImageController extends Controller
      * @param  \App\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Image $image)
+    public function show($id)
     {
         //
+
+        echo 'haha';
+        var_dump($id);
 
         echo 'hi , this is show method!';
     }
