@@ -37,10 +37,14 @@ PUT/PATCH	/img/{img}	update	Image.update
 // 非登录页面不需要 auth:api
 Route::group(['middleware'=>'auth:api'],function(){
 
-    Route::resource('img','ImageController',['only'=>['index','show']]);
+     Route::resource('img','ImageController',['only'=>['index','show']]);
 
-    // 除了 store 外的方法都要做身份认证
-    Route::resource('user','UserController',['except'=>['store']]);
+     // 除了 store 外的方法都要做身份认证
+     Route::resource('user','UserController',['except'=>['store']]);
 
+     Route::resource('auth','AuthController',['only'=>['index','show','store']]);
+     Route::group(['middeware'=>'auth:api'],function(){
+         Route::resource('img','ImageController',['only'=>['index','show']]);
+     });
 
 });
